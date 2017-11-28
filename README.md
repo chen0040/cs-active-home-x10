@@ -1,12 +1,21 @@
 # cs-active-home-x10
 
-A .NET wrapper library for controlling ActiveHome X10 appliance (The X10  is )
+A .NET wrapper library for controlling ActiveHome X10 appliance.
 
 # Install
+
+In order for the cs-active-home-x10 to work, you need to install the ahsdk_install.exe first (which can be found in the Libs folder of this project as well) first. Next run the following nuget command
+with your .net project.
 
 ```bash
 Install-Package cs-active-home-x10 -Version 1.0.1
 ```
+
+To test out you need to have the an X10 device (for example, the LM12U shown below) connected to your home appliance (say a lamp), and then configure its address using the pins on the LM12U.
+
+![This is the LM12U with Address "A1"](LM12U_Address.jpg "This is the LM12U").
+
+Next you can run the cs-active-home-x10-samples-winforms project by entering the lamp address on the WinForm UI launched (say "A1"). Now you can turn on or off your lamp by clicking the button on the WinForm UI.
 
 # Usage
 
@@ -57,10 +66,3 @@ Console.WriteLine(ActiveHomeController.Instance.TurnOff_PLC(lampAddress));
 
 ```
 
-# Hardware
-
-Below is the showing how to configure the "A1" address for the LM12U X10 switch which connect (say a lamp) to the PLC socket (like a power adapter)
-
-![This is the LM12U with Address "A1"](LM12U_Address "This is the LM12U")
-
-![This is the AM12U](AM12U.jpg "This is the AM12U")
