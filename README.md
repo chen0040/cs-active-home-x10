@@ -59,4 +59,8 @@ Console.WriteLine(ActiveHomeController.Instance.TurnOff_PLC(lampAddress));
 
 # Hardware
 
+Below is the showing how to configure the "A1" address for the LM12U X10 switch which connect (say a lamp) to the PLC socket (like a power adapter)
+
+![This is the LM12U with Address "A1"](LM12U_Address "This is the LM12U")
+
 ![This is the AM12U](AM12U.jpg "This is the AM12U")
