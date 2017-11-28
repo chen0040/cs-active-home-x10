@@ -9,8 +9,8 @@
     <projectUrl>https://github.com/chen0040/cs-active-home-x10</projectUrl>
     <iconUrl>https://rawgit.com/chen0040/cs-active-home-x10/master/icon.jpg</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>Queueing Models</description>
-    <releaseNotes>Queueing Models in .NET 4.5.2</releaseNotes>
+    <description>ActiveHome X10 Wrapper</description>
+    <releaseNotes>Simple Wrapper over ActiveHome X10 in .NET 4.5.2</releaseNotes>
     <copyright>Copyright 2017</copyright>
     <tags>X10, Home Automation, Active Home, c-sharp</tags>
     <dependencies>
