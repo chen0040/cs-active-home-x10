@@ -31,9 +31,9 @@ namespace ActiveHomeX10
             }
         }
 
-        public void TurnOn_RF(string address)
+        public string TurnOn_RF(string address)
         {
-            if(string.IsNullOrEmpty(address)) return;
+            if(string.IsNullOrEmpty(address)) return "Invalid Address";
 
             try
             {
@@ -42,27 +42,31 @@ namespace ActiveHomeX10
                 string strData = address + " " + command;
 
                 object Code = mActiveHome.SendAction(strAction, strData, null, null);
-            }
-            catch
-            {
 
+                return strAction + " " + strData + " (" + Convert.ToUInt32(Code) + ")";
+            }
+            catch(Exception ex)
+            {
+                return ex.ToString();
             }
         }
 
-        public void TurnOff_RF(string address)
+        public string TurnOff_RF(string address)
         {
-            if (string.IsNullOrEmpty(address)) return;
+            if (string.IsNullOrEmpty(address)) return "Invalid Address";
 
             string strAction = "SENDRF";
             string command = "Off";
             string strData = address + " " + command;
 
             object Code = mActiveHome.SendAction(strAction, strData, null, null);
+
+            return strAction + " " + strData + " (" + Convert.ToUInt32(Code) + ")";
         }
 
-        public void TurnOn_PLC(string address)
+        public string TurnOn_PLC(string address)
         {
-            if (string.IsNullOrEmpty(address)) return;
+            if (string.IsNullOrEmpty(address)) return "Invalid Address";
             try
             {
                 string strAction = "SENDPLC";
@@ -70,9 +74,11 @@ namespace ActiveHomeX10
                 string strData = address + " " + command;
 
                 object Code = mActiveHome.SendAction(strAction, strData, null, null);
+                return strAction + " " + strData + " (" + Convert.ToUInt32(Code) + ")";
             }
-            catch
+            catch(Exception ex)
             {
+                return ex.ToString();
             }
         }
 
@@ -111,9 +117,9 @@ namespace ActiveHomeX10
             return status;
         }
 
-        public void TurnOff_PLC(string address)
+        public string TurnOff_PLC(string address)
         {
-            if (string.IsNullOrEmpty(address)) return;
+            if (string.IsNullOrEmpty(address)) return "Invalid Address";
             try
             {
                 string strAction = "SENDPLC";
@@ -121,10 +127,12 @@ namespace ActiveHomeX10
                 string strData = address + " " + command;
 
                 object Code = mActiveHome.SendAction(strAction, strData, null, null);
-            }
-            catch
-            {
 
+                return strAction + " " + strData + " (" + Convert.ToUInt32(Code) + ")";
+            }
+            catch(Exception ex)
+            {
+                return ex.ToString();
             }
         }
 
@@ -148,9 +156,9 @@ namespace ActiveHomeX10
             }
         }
 
-        public void TurnOff_PLC(string address, string data)
+        public string TurnOff_PLC(string address, string data)
         {
-            if (string.IsNullOrEmpty(address)) return;
+            if (string.IsNullOrEmpty(address)) return "Invalid Address";
 
             try
             {
@@ -161,11 +169,14 @@ namespace ActiveHomeX10
                     strData += " " + data;
 
                 object Code = mActiveHome.SendAction(strAction, strData, null, null);
-            }
-            catch
-            {
 
+                return strAction + " " + strData + " (" + Convert.ToUInt32(Code) + ")";
             }
+            catch(Exception ex)
+            {
+                return ex.ToString();
+            }
+
         }
 
 
