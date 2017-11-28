@@ -1,6 +1,12 @@
 # cs-active-home-x10
 
-A .NET wrapper library for controlling ActiveHome X10 appliance
+A .NET wrapper library for controlling ActiveHome X10 appliance (The X10  is )
+
+# Install
+
+```bash
+Install-Package cs-active-home-x10 -Version 1.0.1
+```
 
 # Usage
 
@@ -50,3 +56,7 @@ else if (status_code == ActiveHomeDeviceStatus.ON)
 Console.WriteLine(ActiveHomeController.Instance.TurnOff_PLC(lampAddress));
 
 ```
+
+# Hardware
+
+![This is the AM12U](AM12U.jpg "This is the AM12U")
